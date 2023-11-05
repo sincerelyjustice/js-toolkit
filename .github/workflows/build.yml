@@ -25,3 +25,5 @@ jobs:
 
       - name: Deploy to production branch
         run: './.github/scripts/production-deploy.sh'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
