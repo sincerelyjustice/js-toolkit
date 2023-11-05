@@ -1,0 +1,16 @@
+{
+  "name": "js-toolkit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "files": [
+    "array/",
+    "date/",
+    "file-system/",
+    "function/",
+    "object/",
+    "string/",
+    "promise/",
+    "web/",
+    "index.js"
+  ]
+}
