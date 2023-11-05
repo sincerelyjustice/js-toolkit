@@ -1,0 +1,1 @@
+This is where I keep Javascript helper functions which aren't application-specific, which I can use across several of my projects. It's like a personal Lodash. I'll install from the production branch like `yarn add sincerelyjustice/js-toolkit#production`.
