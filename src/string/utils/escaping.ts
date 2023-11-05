@@ -1,6 +1,9 @@
 const ESCAPE_CHAR = '\\';
 
-const isEscaped = (string, substringLocation) => {
+export const isEscaped = (
+  string: string,
+  substringLocation: number
+): boolean => {
   const hasPrecedingBackslash =
     substringLocation > 0 && string[substringLocation - 1] === ESCAPE_CHAR;
   const hasAnother =
@@ -8,7 +11,11 @@ const isEscaped = (string, substringLocation) => {
   return hasPrecedingBackslash && !hasAnother;
 };
 
-const replaceIfNotEscaped = (text, pattern, replacement) => {
+export const replaceIfNotEscaped = (
+  text: string,
+  pattern: string | RegExp,
+  replacement: string | Function
+): string => {
   return text.replace(pattern, (...matchArgs) => {
     const matchLocation = matchArgs[matchArgs.length - 2];
     if (isEscaped(text, matchLocation)) {
@@ -21,5 +28,3 @@ const replaceIfNotEscaped = (text, pattern, replacement) => {
     }
   });
 };
-
-module.exports = { isEscaped, replaceIfNotEscaped };

@@ -1,16 +1,12 @@
 {
   "name": "js-toolkit",
   "version": "1.0.0",
-  "main": "index.js",
-  "files": [
-    "array/",
-    "date/",
-    "file-system/",
-    "function/",
-    "object/",
-    "string/",
-    "promise/",
-    "web/",
-    "index.js"
-  ]
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc" 
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "typescript": "^5.2.2"
+  }
 }

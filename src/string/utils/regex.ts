@@ -1,8 +1,8 @@
-const globalRegex = (regex) => {
+export const globalRegex = (regex: string | RegExp): RegExp => {
   return new RegExp(regex, 'g');
 };
 
-const matchesAny = (string, regexps) => {
+export const matchesAny = (string: string, regexps: RegExp[]) => {
   for (const regex of regexps) {
     if (regex.test(string)) {
       return true;
@@ -10,5 +10,3 @@ const matchesAny = (string, regexps) => {
   }
   return false;
 };
-
-module.exports = { globalRegex, matchesAny };

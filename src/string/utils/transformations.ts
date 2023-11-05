@@ -1,13 +1,12 @@
-const { isEmptyString } = require('./checks');
+import { isEmptyString } from './checks';
 
-const capitalize = (word) => {
+export const capitalize = (word: string): string => {
   if (!isEmptyString(word)) {
     return word.charAt(0).toUpperCase() + word.slice(1);
   } else return word;
 };
 
-const csvToArray = (csv) => {
+export const csvToArray = (csv: string): string[] => {
   return isEmptyString(csv) ? [] : csv.split(',');
 };
 
-module.exports = { capitalize, csvToArray };
