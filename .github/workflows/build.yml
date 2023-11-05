@@ -24,4 +24,4 @@ jobs:
         run: yarn build
 
       - name: Deploy to production branch
-        run: './production-deploy.sh'
+        run: './.github/scripts/production-deploy.sh'
