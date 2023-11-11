@@ -10,3 +10,6 @@ export const csvToArray = (csv: string): string[] => {
   return isEmptyString(csv) ? [] : csv.split(',');
 };
 
+export const erasable = (string: string, erasureCondition: Boolean) => {
+  return erasureCondition ? '' : string;
+};
