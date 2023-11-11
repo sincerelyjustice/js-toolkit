@@ -8,7 +8,7 @@ export const negator = (fn: Function) => {
   return (...args: any[]) => !fn(...args);
 };
 
-export const makePropertyMatcher = (key: PropertyKey, value: Primitive) => {
+export const propertyMatcher = (key: PropertyKey, value: Primitive) => {
   return (obj: Record<PropertyKey, any>) => obj[key] === value; 
 };
 
