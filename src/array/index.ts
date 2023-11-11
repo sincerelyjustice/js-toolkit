@@ -20,3 +20,19 @@ export const range = (bound: number): number[] => {
   }
   return rangeArr;
 };
+
+export const replaceElements = <T>(
+  array: T[],
+  predicate: (element: T) => boolean,
+  replacement: any
+) => {
+  const newArr = [];
+  for (const element of array) {
+    if (predicate(element)) {
+      newArr.push(replacement);
+    } else {
+      newArr.push(element);
+    }
+  }
+  return newArr;
+};
