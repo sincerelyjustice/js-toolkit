@@ -2,11 +2,11 @@ export const equalityFactory = <T>(target: T) => {
   return (source: T) => source === target;
 };
 
-export const negator = (fn: Function): Function => {
+export const negator = (fn: Function) => {
   return (...args: any[]) => !fn(...args);
 };
 
-export const pipe = (args: any[], ...fns: Function[]): any => {
+export const pipe = (args: any[], ...fns: Function[]) => {
   let result;
   for (let i = 0; i < fns.length; i++) {
     const fn = fns[i];

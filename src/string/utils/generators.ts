@@ -1,1 +1,1 @@
-export const whitespace = (amount: number): string => ' '.repeat(amount);
+export const whitespace = (amount: number) => ' '.repeat(amount);

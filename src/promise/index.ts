@@ -8,7 +8,7 @@ type TimeoutOptions = {
 export const withTimeout = (
   fn: AsyncFn,
   options: TimeoutOptions = {}
-): AsyncFn => {
+) => {
   const { timeout = 5000, errorMessage = 'Request timed out.' } = options;
   let timer: ReturnType<typeof setTimeout>;
   const timeouter = () =>
@@ -29,7 +29,7 @@ type RetryPromiseOptions = {
 export const retryPromise = (
   fn: AsyncFn,
   options: RetryPromiseOptions = {}
-): Promise<any> => {
+) => {
   const { retries = 3, delay = 1000 } = options;
   let triesLeft = retries;
   return new Promise((resolve, reject) => {

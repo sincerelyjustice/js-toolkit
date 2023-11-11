@@ -1,4 +1,4 @@
-export const globalRegex = (regex: string | RegExp): RegExp => {
+export const globalRegex = (regex: string | RegExp)  => {
   return new RegExp(regex, 'g');
 };
 

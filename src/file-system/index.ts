@@ -1,10 +1,10 @@
 import path from 'path';
 
-export const arrayToPath = (array: any[]): string => {
+export const arrayToPath = (array: any[]) => {
   return path.join(...array);
 };
 
-export const forwardSlashes = (path: string): string => {
+export const forwardSlashes = (path: string) => {
   return path.replace(/\\/g, '/');
 };
 
