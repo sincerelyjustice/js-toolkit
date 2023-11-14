@@ -1,5 +1,7 @@
 import type { Primitive } from '../types';
 
+export const hasLength = (array: any[]) => Boolean(array.length);
+
 export const removeDuplicates = (array: Primitive[]): Primitive[] => {
   const uniques = [];
   const seen: Record<string, boolean> = {};
