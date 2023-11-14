@@ -6,6 +6,12 @@ export const capitalize = (word: string) => {
   } else return word;
 };
 
+export const joinSentences = (sentence1: string, sentence2: string) => {
+  const normedSentence1 = sentence1.trim().replace(/\.$/, '');
+  const normedSentence2 = sentence2.trim();
+  return `${normedSentence1}. ${normedSentence2}`;
+};
+
 export const csvToArray = (csv: string): string[] => {
   return isEmptyString(csv) ? [] : csv.split(',');
 };
